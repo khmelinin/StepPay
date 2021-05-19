@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using STEP_PAY.Views;
+using STEP_PAY.ViewModels;
 
 namespace STEP_PAY
 {
@@ -13,5 +15,16 @@ namespace STEP_PAY
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            var mainView = new MainView()
+            {
+                DataContext = new MainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
+            };
+
+            MainWindow = mainView;
+            MainWindow.Show();
+        }
     }
 }

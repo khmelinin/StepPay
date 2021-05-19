@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\AdmiN\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\
 STEP_PAY
 none
 false
 DEBUG;TRACE
-C:\Users\AdmiN\Source\Repos\khmelinin\StepPay\STEP_PAY\App.xaml
-11151548125
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\App.xaml
+41067523035
 
-61577271907
-13-1662647192
-MainWindow.xaml;
+17-1079101639
+14-548390813
+Views\ExpenceStatisticsView.xaml;Views\MainView.xaml;Views\NewsView.xaml;Views\SupportView.xaml;
 
 False
 

@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\STEP_PAY"
   ],
+  "SelectedNode": "\\STEP_PAY\\MainWindow.xaml",
   "PreviewInSolutionExplorer": false
 }
