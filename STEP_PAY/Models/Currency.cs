@@ -1,11 +1,18 @@
-﻿namespace STEP_PAY.Models
+﻿using Newtonsoft.Json;
+
+namespace STEP_PAY.Models
 {
     internal class Currency
     {
-        public int r030 { get; set; }
-        public string txt { get; set; }
-        public double rate { get; set; }
-        public string cc { get; set; }
-        public string exchangedate { get; set; }
+        [JsonProperty(PropertyName = "r030")]
+        public readonly int CurrencyCode;
+        [JsonProperty(PropertyName = "txt")]
+        public readonly string FullName;
+        [JsonProperty(PropertyName = "rate")]
+        public readonly double Rate;
+        [JsonProperty(PropertyName = "cc")]
+        public readonly string ShortName;
+        [JsonProperty(PropertyName = "exchangedate")]
+        public readonly string Exchangedate;
     }
 }
