@@ -1,4 +1,5 @@
-﻿using STEP_PAY.Models;
+﻿using Newtonsoft.Json;
+using STEP_PAY.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,13 +34,11 @@ namespace STEP_PAY
             HttpClient client = new HttpClient();
             List<string> allowedCurrencies = new List<string> { "USD", "EUR", "RUB" };
             var res = await client.GetAsync(Globals.CurrenciesUrl);
-
-            if (!res.IsSuccessStatusCode) throw new Exception("Couldn\'t receive currencies.");
-
             var content = res.Content;
-            var allCurrencies = await JsonSerializer.DeserializeAsync<List<Currency>>(await content.ReadAsStreamAsync());
+            var allCurrencies = JsonConvert.DeserializeObject<List<Currency>>(await content.ReadAsStringAsync());
+
             var currencies = from currency in allCurrencies
-                             where allowedCurrencies.Find((str) => str == currency.cc) != null
+                             where allowedCurrencies.Find((shortName) => shortName == currency.ShortName) != null
                              select currency;
 
             return currencies.ToList();
