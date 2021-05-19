@@ -1,4 +1,6 @@
-﻿using System;
+﻿using STEP_PAY.View;
+using STEP_PAY.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,16 @@ namespace STEP_PAY
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            var mainView = new MainView()
+            {
+                DataContext = new CardViewModel()
+            };
+
+            MainWindow = mainView;
+            MainWindow.Show();
+        }
     }
 }
