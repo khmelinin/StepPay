@@ -37,7 +37,8 @@ namespace STEP_PAY
             if (!res.IsSuccessStatusCode) throw new Exception("Couldn\'t receive currencies.");
 
             var content = res.Content;
-            var currencies = from currency in JsonSerializer.DeserializeAsync<List<Currency>>(await content.ReadAsStreamAsync()).Result
+            var allCurrencies = await JsonSerializer.DeserializeAsync<List<Currency>>(await content.ReadAsStreamAsync());
+            var currencies = from currency in allCurrencies
                              where allowedCurrencies.Find((str) => str == currency.cc) != null
                              select currency;
 
