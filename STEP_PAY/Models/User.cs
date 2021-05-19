@@ -67,12 +67,12 @@ namespace STEP_PAY.Models
         // Добавить карту
         public void AddCard(Card card)
         {
-
+            Cards.Add(card);
         }
         // Удалить Карту
         public void RemoveCard(Card card)
         {
-
+            Cards.Remove(card);
         }
        
         
