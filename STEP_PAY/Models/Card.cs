@@ -10,22 +10,15 @@ namespace STEP_PAY.Models
     {
         public int Id { get; set; }
         
+        /////////
+        // INT //
+        /////////
+
         // Количество денег
         public int Money { get; set; }
-        // Текущяя валюта
-        public string Сurrency { get; set; }
 
         // Id пользователя
         public int UserId { get; set; }
-
-        // Название Карты
-        public string Title { get; set; }
-
-        // Избранное или нет
-        public bool Favorites { get; set; }
-
-        // Номер Карты
-        public string Number { get; set; }     
 
         // Пароль
         public int PinCode { get; set; }
@@ -35,5 +28,33 @@ namespace STEP_PAY.Models
 
         // Месяц Выпуска
         public int Month { get; set; }
+
+
+        ////////////
+        // String //
+        ////////////
+        
+        // Текущяя валюта
+        public string Сurrency { get; set; }
+
+        // Название Карты
+        public string Title { get; set; }
+
+
+
+        //////////
+        // Bool //
+        //////////
+
+        // Избранное или нет
+        public bool Favorites { get; set; }
+        // Выбрана или нет
+        public bool Active { get; set; }
+
+        // Номер Карты
+        public string Number { get; set; }     
+
+      
+        
     }
 }

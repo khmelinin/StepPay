@@ -8,14 +8,26 @@ namespace STEP_PAY.Models
 {
     class Account
     {
+        /////////
+        // INT //
+        /////////
+        
         public int Id { get; set; }
 
+        // Id Пользователя
+        public int UserId { get; set; }
+
+
+        ////////////
+        // String //
+        ////////////
+        
         // Логин
+
         public string Login { get; set; }
         // Пароль
         public string Password { get; set; }
-        // Id Пользователя
-        public int UserId { get; set; }
+       
 
     }
 }
