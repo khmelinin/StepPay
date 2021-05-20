@@ -20,7 +20,7 @@ namespace STEP_PAY
             base.OnStartup(e);
             var mainView = new MainView()
             {
-                DataContext = new CardViewModel()
+                DataContext = new SupportViewModel() /*new CardViewModel()*/
             };
 
             MainWindow = mainView;
