@@ -1,12 +1,12 @@
-﻿using STEP_PAY.View;
-using STEP_PAY.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using STEP_PAY.Views;
+using STEP_PAY.ViewModels;
 
 namespace STEP_PAY
 {
@@ -18,9 +18,9 @@ namespace STEP_PAY
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var mainView = new MainView()
+            var mainView = new STEP_PAY.MainWindow
             {
-                DataContext = new CardViewModel()
+                DataContext = new MainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
             };
 
             MainWindow = mainView;
@@ -28,3 +28,4 @@ namespace STEP_PAY
         }
     }
 }
+

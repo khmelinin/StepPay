@@ -51,6 +51,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=8.0.0.1909, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.8.0.0.1909\lib\net47\Prism.dll</HintPath>
     </Reference>
@@ -74,24 +77,73 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Utilites\Utility.cs" />
+    <Compile Include="ViewModels\ExpenceStatisticsViewModel.cs" />
+    <Compile Include="ViewModels\IExpenceStatisticsViewModel.cs" />
+    <Compile Include="ViewModels\IMainViewModel.cs" />
+    <Compile Include="ViewModels\INewsViewModel.cs" />
+    <Compile Include="ViewModels\ISupportViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\SupportViewModel.cs" />
     <Compile Include="ViewModel\CardViewModel.cs" />
-    <Compile Include="View\MainView.xaml.cs">
+    <Compile Include="Views\ExpenceStatisticsView.xaml.cs">
+      <DependentUpon>ExpenceStatisticsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsView.xaml.cs">
+      <DependentUpon>NewsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SupportView.xaml.cs">
+      <DependentUpon>SupportView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CardPage.xaml.cs">
       <DependentUpon>CardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\MainView.xaml">
-      <SubType>Designer</SubType>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\ExpenceStatisticsView.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NewsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SupportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="View\CardPage.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +185,5 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
