@@ -2,17 +2,17 @@
 
 namespace STEP_PAY.Models
 {
-    internal class Currency
+    public class Currency
     {
         [JsonProperty(PropertyName = "r030")]
-        public readonly int CurrencyCode;
+        public int CurrencyCode { get; set; }
         [JsonProperty(PropertyName = "txt")]
-        public readonly string FullName;
+        public string FullName { get; set; }
         [JsonProperty(PropertyName = "rate")]
-        public readonly double Rate;
+        public double Rate { get; set; }
         [JsonProperty(PropertyName = "cc")]
-        public readonly string ShortName;
+        public string ShortName { get; set; }
         [JsonProperty(PropertyName = "exchangedate")]
-        public readonly string Exchangedate;
+        public string ExchangeDate { get; set; }
     }
 }
