@@ -25,6 +25,15 @@ namespace STEP_PAY
             InitializeComponent();
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("/Сonsumption.xaml", UriKind.Relative));
+        }
     }
 }

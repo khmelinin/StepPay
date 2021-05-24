@@ -63,7 +63,6 @@ namespace STEP_PAY.Models
         // Functions //
         ///////////////
         
-
         // Добавить карту
         public void AddCard(Card card)
         {

@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\STEP_PAY",
+    "\\STEP_PAY\\Models"
   ],
+  "SelectedNode": "\\STEP_PAY.sln",
   "PreviewInSolutionExplorer": false
 }
