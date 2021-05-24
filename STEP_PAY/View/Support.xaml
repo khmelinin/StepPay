@@ -22,18 +22,18 @@
                 </TabItem.Header>
                 <TabItem.Content>
                     <TextBlock FontSize="16" Margin="0 20" TextWrapping="Wrap" TextAlignment="Left" Width="600">
-                        <Run>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium </Run>
-                        doloremque laudantium, 
-                        totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto 
-                        beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, 
-                        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione
-                        voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor 
-                        sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora 
-                        inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima 
-                        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-                        ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate 
-                        velit esse, quam nihil molestiae consequatur, vel illum, 
-                        qui dolorem eum fugiat, quo voluptas nulla pariatur?
+                        Основанный в 1992 году, коммерческий банк ШтепПай является лидером банковского 
+                        рынка страны. По данным исследования CBR Ukraine в IV квартале 2020 года с нами сотрудничают
+                        62% украинцев – физических лиц старше 16 лет. Считают основным банком 49,4% пользователей
+                        банковских услуг – 
+                        физических лиц, что больше, чем в следующих за нами двадцати банках вместе взятых.
+                        <LineBreak/>
+                        <LineBreak/>
+                        <Run>ШтепПай является одним из наиболее инновационных банков мира. Например, более 10 
+                        лет назад банк стал одним из первых в мире использовать одноразовые SMS-пароли. К последним 
+                        инновациям, которые получили признание по всему миру, относятся такие продукты, как платежный 
+                        -терминал, 
+                        вход в Интернет-банк через QR-код, онлайн-инкассация, а также десятки различных мобильных приложений.</Run>
                     </TextBlock>
                 </TabItem.Content>
             </TabItem>
@@ -79,8 +79,10 @@
                     />
                 <TextBlock 
                     Text="Вопрос, обратная связь - Ми здесь ради всего этого."
-                    Margin="0 3 0 6"
+                    Margin="0 3 0 10"
                     />
+                <TextBlock Text="Пожалуйте, ведите адрес электронной почты *" FontSize="9" FontWeight="DemiBold"/>
+                <TextBox Text="{Binding EmailText , UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox
                     Width="500"
                     Height="100"
