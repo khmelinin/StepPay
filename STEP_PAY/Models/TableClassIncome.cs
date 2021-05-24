@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace STEP_PAY.Models
 {
-    public class TableClass
+    public class TableClassIncome
     {
         public string Title { get; set; }
         public double Money { get; set; }
         public double Percent { get; set; }
-
     }
 }

@@ -93,7 +93,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\TableClass.cs" />
+    <Compile Include="Models\TableClassIncome.cs" />
     <Compile Include="Utilites\Utility.cs" />
+    <Compile Include="Views\AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddWindow2.xaml.cs">
+      <DependentUpon>AddWindow2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Сonsumption.xaml.cs">
       <DependentUpon>Сonsumption.xaml</DependentUpon>
     </Compile>
@@ -111,6 +118,14 @@
       <SubType>Code</SubType>
       <Link>MainWindow.xaml.cs</Link>
     </Compile>
+    <Page Include="Views\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Сonsumption.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,5 +173,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

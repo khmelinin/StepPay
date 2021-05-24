@@ -43,3 +43,7 @@ C:\Users\misha\source\git\STEP_PAY\bin\Debug\System.Web.WebPages.xml
 C:\Users\misha\source\git\STEP_PAY\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\misha\source\git\STEP_PAY\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\misha\source\git\STEP_PAY\obj\Debug\STEP_PAY.csproj.CopyComplete
+C:\Users\misha\source\git\STEP_PAY\obj\Debug\Views\AddWindow.g.cs
+C:\Users\misha\source\git\STEP_PAY\obj\Debug\Views\AddWindow.baml
+C:\Users\misha\source\git\STEP_PAY\obj\Debug\Views\AddWindow2.g.cs
+C:\Users\misha\source\git\STEP_PAY\obj\Debug\Views\AddWindow2.baml
