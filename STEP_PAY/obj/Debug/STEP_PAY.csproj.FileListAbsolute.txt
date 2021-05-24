@@ -39,3 +39,5 @@ C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\Suppor
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\ExpenceStatisticsView.baml
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\SupportView.baml
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.xml

@@ -16,9 +16,27 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="0" Grid.Column="0" ShowGridLines="True">
-            <Grid.RowDefinitions>
+            <ListView ItemsSource="{Binding Currencies, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label FontSize="12" Content="{Binding ShortName}"/>
+                            <Label FontSize="12" Grid.Column="1" Content="{Binding Rate}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -27,11 +45,11 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Border BorderThickness="1" BorderBrush="Black">
+            </Grid.ColumnDefinitions>-->
+            <!--<Border BorderThickness="1" BorderBrush="Black">
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Валюты:" FontSize="20"  TextWrapping="Wrap"></TextBlock>
-            </Border>
-            <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+            </Border>-->
+            <!--<Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
                 <TextBlock Name="USDValue" FontSize="20" TextWrapping="Wrap">Доллар США</TextBlock>
             </Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="2">
@@ -54,35 +72,36 @@
             </Border>
             <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="2">
                 <TextBlock Name="HKDValue" FontSize="20" TextWrapping="Wrap">Гонконгский доллар</TextBlock>
-            </Border>
+            </Border>-->
         </Grid>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1">
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
             <StackPanel>
-                <TextBlock FontSize="15">Положить депозит в долларах под 0.15 процентов!</TextBlock>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в долларах под 0.2 процента!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
-                <TextBlock FontSize="15">Положить депозит в эвро под 0.1 процент!</TextBlock>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в эвро под 0.1 процент!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
-                <TextBlock FontSize="15">Положить депозит в гривнах под 7 процентов!</TextBlock>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в гривнах под 7 процентов!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
-                <TextBlock FontSize="15">Взять кредит в долларах под 3 процента!</TextBlock>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в долларах под 3 процента!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
-                <TextBlock FontSize="15">Взять кредит в эвро под 2 процента!</TextBlock>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в эвро под 2 процента!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
-                <TextBlock FontSize="15">Взять кредит в гривнах под 10 процентов!</TextBlock>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в гривнах под 10 процентов!</TextBlock>
             </StackPanel>
         </Border>
-        <Grid Grid.Row="1" Grid.Column="0">
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
             <StackPanel>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command1}">Свежие новости</Hyperlink></TextBlock>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command2}">Новости этой недели</Hyperlink></TextBlock>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command3}">Новости мира</Hyperlink></TextBlock>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3">
             <StackPanel>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command4}">Курс валют</Hyperlink></TextBlock>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command5}">Новости экономики</Hyperlink></TextBlock>
                 <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command6}">Что там с криптой???</Hyperlink></TextBlock>
+                
             </StackPanel>
         </Grid>
     </Grid>
