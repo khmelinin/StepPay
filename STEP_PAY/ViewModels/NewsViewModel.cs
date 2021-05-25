@@ -33,6 +33,7 @@ namespace STEP_PAY.ViewModels
     }
     public class NewsViewModel : BindableBase, INewsViewModel
     {
+        static int indexValuta = 0;
         private List<Currency> currencies = new List<Currency>();
         public List<Currency> Currencies
         {
@@ -42,9 +43,68 @@ namespace STEP_PAY.ViewModels
                 SetProperty(ref currencies, value);
             }
         }
+
+        private double money = 100;
+        private string valueMoneyString = "";
+        public string ValueMoney
+        {
+            get => valueMoneyString;
+            set
+            {
+                SetProperty(ref valueMoneyString, value);
+            }
+        }
+        private void ValueMoneyChange_Click()
+        {
+            switch(indexValuta)
+            {
+                case 0:
+                    money /= currencies[0].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[0].ShortName;
+                    break;
+                case 1:
+                    money *= currencies[0].Rate;
+                    money /= currencies[1].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[1].ShortName;
+                    break;
+                case 2:
+                    money *= currencies[1].Rate;
+                    money /= currencies[2].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[2].ShortName;
+                    break;
+                case 3:
+                    money *= currencies[2].Rate;
+                    money /= currencies[3].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[3].ShortName;
+                    break;
+                case 4:
+                    money *= currencies[3].Rate;
+                    money /= currencies[4].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[4].ShortName;
+                    break;
+                case 5:
+                    money *= currencies[4].Rate;
+                    money /= currencies[5].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[5].ShortName;
+                    break;
+                case 6:
+                    money *= currencies[5].Rate;
+                    money /= currencies[6].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " " + currencies[6].ShortName;
+                    break;
+                case 7:
+                    money *= currencies[6].Rate;
+                    ValueMoney = Convert.ToString(Math.Round(money, 2)) + " UAH";
+                    indexValuta = -1;
+                    break;
+            }
+            indexValuta++;
+        }
+        public ICommand ValueMoneyChange_Command => new DelegateCommand(ValueMoneyChange_Click);
         public NewsViewModel()
         {
             GetCurrencies();
+            valueMoneyString = Convert.ToString(money) + " UAH";
         }
 
         private async Task GetCurrencies()
@@ -59,6 +119,7 @@ namespace STEP_PAY.ViewModels
                              select currency;
 
             Currencies = new List<Currency>(currencies);
+            Console.WriteLine(currencies.Count());
         }
         private void hyperlink_Click1()
         {

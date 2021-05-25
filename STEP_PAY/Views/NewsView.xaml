@@ -87,6 +87,7 @@
                 <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в эвро под 2 процента!</TextBlock>
                 <Border BorderThickness="1" BorderBrush="Black" ></Border>
                 <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в гривнах под 10 процентов!</TextBlock>
+                <Button Height="20" Content="{Binding ValueMoney, UpdateSourceTrigger=PropertyChanged}" Command="{Binding ValueMoneyChange_Command}"></Button>
             </StackPanel>
         </Border>
         <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
