@@ -1,0 +1,59 @@
+﻿<Window x:Class="STEP_PAY.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:STEP_PAY"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="0,0,3.333,-6.333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="315*" />
+                <ColumnDefinition Width="284*"/>
+                <ColumnDefinition Width="199*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="168.667" />
+                <RowDefinition Height="Auto" MinHeight="17.333" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Margin="0,0,171.667,0">
+                <TextBox />
+                <Button x:Name="textbox_exchange_rates"
+                Margin="8,8,122.667,8"
+                Content="textbox_exchange_rates"
+                />
+                <TextBlock />
+            </StackPanel>
+
+            <TextBlock Grid.Column="1" Margin="10.333,10,9.667,10" TextWrapping="Wrap" Background="White" Text="{Binding TextMessage}"/>
+
+            <TextBox TextWrapping="Wrap" Text="{Binding TextAdd}" Margin="10,10.333,9.667,6" Grid.Row="2" Grid.RowSpan="2"/>
+
+            <Button  Content="Профиль"  VerticalAlignment="Bottom" Margin="10.333,0,10.333,25" Grid.Row="0" Grid.Column="2" Command="{Binding ClearComm}" Height="31"/>
+            <Button x:Name="menu_all_cards" Content="Menu_all_cards"  VerticalAlignment="Center" Margin="11.333,10.333,9.667,26" Grid.Row="2" Grid.Column="1" Command="{Binding AddComm}" Height="135"/>
+
+            <StackPanel Grid.Row="2" Grid.Column="2" Margin="0.333,0.333,0.333,-4" Grid.RowSpan="2">
+                <Button Content="Загрузить" Margin="10" Command="{Binding LoadComm}"/>
+                <Button Content="Сохранить" Margin="10" Command="{Binding SaveComm}"/>
+            </StackPanel>
+
+            <TextBlock x:Name="textBlock" Grid.Column="0" RenderTransformOrigin="0.383,0.523" HorizontalAlignment="Right" Width="262" Margin="0,0,51.667,0" />
+
+
+            <Button x:Name="button_add_name_method" Grid.Column="1" Grid.Row="3" Margin="11.333,6,9.667,-37">Добавить метод оплаты</Button>
+            <Button x:Name="button_other_currencies" Grid.Column="1" Grid.Row="3" Margin="11.333,100,9.667,-133">Показать в другой валюте</Button>
+            <Button x:Name="button_transaction_history" Grid.Column="1" Grid.Row="3" Margin="11.333,59,9.667,-78">История транзакций</Button>
+        </Grid>
+
+
+
+
+
+
+</Grid>
+</Window>
