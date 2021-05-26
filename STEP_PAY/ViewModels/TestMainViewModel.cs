@@ -8,13 +8,13 @@ using Prism.Mvvm;
 
 namespace STEP_PAY.ViewModels
 {
-    class MainViewModel : BindableBase, IMainViewModel
+    class TestMainViewModel : BindableBase, ITestMainViewModel
     {
         private INewsViewModel news;
         private ISupportViewModel support;
         private IExpenceStatisticsViewModel expence;
 
-        public MainViewModel(INewsViewModel nw, ISupportViewModel sw, IExpenceStatisticsViewModel ew)
+        public TestMainViewModel(INewsViewModel nw, ISupportViewModel sw, IExpenceStatisticsViewModel ew)
         {
             news = nw;
             support = sw;

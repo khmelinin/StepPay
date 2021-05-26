@@ -18,9 +18,9 @@ namespace STEP_PAY
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var mainView = new MainView()
+            var mainView = new TestMainView()
             {
-                DataContext = new MainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
+                DataContext = new TestMainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
             };
 
             MainWindow = mainView;

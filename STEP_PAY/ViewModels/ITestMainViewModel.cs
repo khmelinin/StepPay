@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace STEP_PAY.ViewModels
 {
-    interface IMainViewModel
+    interface ITestMainViewModel
     {
     }
 }

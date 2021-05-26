@@ -79,17 +79,17 @@
     </ApplicationDefinition>
     <Compile Include="ViewModels\ExpenceStatisticsViewModel.cs" />
     <Compile Include="ViewModels\IExpenceStatisticsViewModel.cs" />
-    <Compile Include="ViewModels\IMainViewModel.cs" />
+    <Compile Include="ViewModels\ITestMainViewModel.cs" />
     <Compile Include="ViewModels\INewsViewModel.cs" />
     <Compile Include="ViewModels\ISupportViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\TestMainViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
     <Compile Include="ViewModels\SupportViewModel.cs" />
     <Compile Include="Views\ExpenceStatisticsView.xaml.cs">
       <DependentUpon>ExpenceStatisticsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
+    <Compile Include="Views\TestMainView.xaml.cs">
+      <DependentUpon>TestMainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NewsView.xaml.cs">
       <DependentUpon>NewsView.xaml</DependentUpon>
@@ -105,7 +105,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\MainView.xaml">
+    <Page Include="Views\TestMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

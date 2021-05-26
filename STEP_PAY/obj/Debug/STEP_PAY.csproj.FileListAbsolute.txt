@@ -26,12 +26,10 @@ C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.csp
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.csproj.CoreCompileInputs.cache
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.exe
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.pdb
-C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\MainView.g.cs
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\NewsView.g.cs
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Prism.dll
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Prism.pdb
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Prism.xml
-C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\MainView.baml
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\NewsView.baml
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.csproj.CopyComplete
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\ExpenceStatisticsView.g.cs
@@ -41,3 +39,5 @@ C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\Expenc
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\SupportView.baml
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\TestMainView.g.cs
+C:\Users\Паша\Source\Repos\khmelinin\StepPay\STEP_PAY\obj\Debug\Views\TestMainView.baml

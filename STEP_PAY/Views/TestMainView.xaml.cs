@@ -17,9 +17,9 @@ namespace STEP_PAY.Views
     /// <summary>
     /// Логика взаимодействия для MainView.xaml
     /// </summary>
-    public partial class MainView : Window
+    public partial class TestMainView : Window
     {
-        public MainView()
+        public TestMainView()
         {
             InitializeComponent();
         }
