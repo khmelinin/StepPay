@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Prism.Mvvm;
 
+
 namespace STEP_PAY.ViewModels
 {
     class MainViewModel : BindableBase, IMainViewModel

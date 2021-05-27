@@ -29,7 +29,6 @@ namespace STEP_PAY.Models
         // Месяц Выпуска
         public int Month { get; set; }
 
-
         ////////////
         // String //
         ////////////
@@ -39,8 +38,6 @@ namespace STEP_PAY.Models
 
         // Название Карты
         public string Title { get; set; }
-
-
 
         //////////
         // Bool //
@@ -53,8 +50,6 @@ namespace STEP_PAY.Models
 
         // Номер Карты
         public string Number { get; set; }     
-
       
-        
     }
 }

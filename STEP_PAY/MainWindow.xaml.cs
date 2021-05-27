@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using STEP_PAY.Models;
+using STEP_PAY.ViewModels;
+using STEP_PAY.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,31 +25,43 @@ namespace STEP_PAY
     /// </summary>
     public partial class MainWindow : Window
     {
-        public object Globals { get; private set; }
-
         public MainWindow()
         {
             InitializeComponent();
+            DataContext =  /*new SupportViewModel() */new CardViewModel();
         }
-
-        private void textbox_exchange_rates_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private async Task<List<Currency>> GetCurrencies()
+        private async Task<List<Models.Currency>> GetCurrencies()
         {
             HttpClient client = new HttpClient();
             List<string> allowedCurrencies = new List<string> { "USD", "EUR", "RUB" };
-            var res = await client.GetAsync("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
+            var res = await client.GetAsync(Globals.CurrenciesUrl);
             var content = res.Content;
-            var allCurrencies = JsonConvert.DeserializeObject<List<Currency>>(await content.ReadAsStringAsync());
+            var allCurrencies = JsonConvert.DeserializeObject<List<Models.Currency>>(await content.ReadAsStringAsync());
 
             var currencies = from currency in allCurrencies
                              where allowedCurrencies.Find((shortName) => shortName == currency.ShortName) != null
                              select currency;
 
             return currencies.ToList();
+        }
+
+        private void button_profile_Click(object sender, RoutedEventArgs e)
+        {
+            var mainView = new TestMainView()
+            {
+                DataContext = new TestMainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
+            };
+
+            mainView.Show();
+
+            //TestMainView test = new TestMainView();
+            //test.Show();
+        }
+
+        private void button_trans_history_Click(object sender, RoutedEventArgs e)
+        {
+            var th = new STEP_PAY.Views.TransHistory();
+            th.Show();
         }
     }
 }

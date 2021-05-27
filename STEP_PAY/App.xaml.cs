@@ -13,19 +13,38 @@ namespace STEP_PAY
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application
+    public partial class MainWindow : Window
     {
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            base.OnStartup(e);
-            var mainView = new STEP_PAY.MainWindow
-            {
-                DataContext = new MainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
-            };
 
-            MainWindow = mainView;
-            MainWindow.Show();
-        }
     }
-}
 
+    //public partial class App : Application
+    //{
+    //    protected override void OnStartup(StartupEventArgs e)
+    //    {
+    //        base.OnStartup(e);
+    //        var mainView = new TestMainView()
+    //        {
+    //            DataContext = new TestMainViewModel(new NewsViewModel(), new SupportViewModel(), new ExpenceStatisticsViewModel())
+    //        };
+
+    //        MainWindow = mainView;
+    //        MainWindow.Show();
+    //    }
+    //}
+
+    //public partial class App : Application
+    //{
+    //    protected override void OnStartup(StartupEventArgs e)
+    //    {
+    //        base.OnStartup(e);
+    //        var mainView = new MainWindow()
+    //        {
+    //            DataContext =  /*new SupportViewModel() */new CardViewModel()
+    //        };
+
+    //        MainWindow = mainView;
+    //        MainWindow.Show();
+    //    }
+    //}
+}

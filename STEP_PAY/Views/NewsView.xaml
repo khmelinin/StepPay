@@ -9,13 +9,65 @@
              d:DataContext="{d:DesignInstance Type=vm:NewsViewModel, IsDesignTimeCreatable=False}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
-            <Label>NEWS</Label>
-            <Label>NEWS</Label>
-            <Label>NEWS</Label>
-            <Label>NEWS</Label>
-            <Label>NEWS</Label>
-            <Label>NEWS</Label>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" ShowGridLines="True">
+            <ListView ItemsSource="{Binding Currencies, UpdateSourceTrigger=PropertyChanged}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label FontSize="12" Content="{Binding ShortName}"/>
+                            <Label FontSize="12" Grid.Column="1" Content="{Binding Rate}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </Grid>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+            <StackPanel>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в долларах под 0.2 процента!</TextBlock>
+                <Border BorderThickness="1" BorderBrush="Black" ></Border>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в эвро под 0.1 процент!</TextBlock>
+                <Border BorderThickness="1" BorderBrush="Black" ></Border>
+                <TextBlock FontSize="22" TextWrapping="Wrap">Теперь можно положить депозит в гривнах под 7 процентов!</TextBlock>
+                <Border BorderThickness="1" BorderBrush="Black" ></Border>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в долларах под 3 процента!</TextBlock>
+                <Border BorderThickness="1" BorderBrush="Black" ></Border>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в эвро под 2 процента!</TextBlock>
+                <Border BorderThickness="1" BorderBrush="Black" ></Border>
+                <TextBlock FontSize="24" TextWrapping="Wrap">Теперь можно взять кредит в гривнах под 10 процентов!</TextBlock>
+                <Button Height="20" Content="{Binding ValueMoney, UpdateSourceTrigger=PropertyChanged}" Command="{Binding ValueMoneyChange_Command}"></Button>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <StackPanel>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command1}">Свежие новости</Hyperlink></TextBlock>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command2}">Новости этой недели</Hyperlink></TextBlock>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command3}">Новости мира</Hyperlink></TextBlock>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3">
+            <StackPanel>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command4}">Курс валют</Hyperlink></TextBlock>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command5}">Новости экономики</Hyperlink></TextBlock>
+                <TextBlock FontSize="32"><Hyperlink Command="{Binding Hyperlink_Command6}">Что там с криптой???</Hyperlink></TextBlock>
+                
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>
