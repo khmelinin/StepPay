@@ -10,9 +10,33 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox 
+                ItemsSource="{Binding Cards, UpdateSourceTrigger=PropertyChanged}"
+                SelectedValuePath="Number"
+                SelectedValue="{Binding SelectedCard}"
+                Width="206"
+                ItemStringFormat=""
+                >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label FontSize="12" Content="{Binding Title}"/>
+                            <Label FontSize="12" Grid.Column="1" Content="{Binding Money}" />
+                        </Grid>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Select Card" Command="{Binding DropDownClosed}" Cursor="Hand"/>
+        </StackPanel>
         <StackPanel 
-            Grid.Row="0" 
+            Grid.Row="1" 
             Orientation="Horizontal" 
             HorizontalAlignment="Center">
             <Button 
@@ -78,18 +102,15 @@
         </StackPanel>
         <StackPanel 
             Visibility="{Binding ShowCard , UpdateSourceTrigger=PropertyChanged}" 
-            Grid.Row="1" Orientation="Vertical"
+            Grid.Row="2" Orientation="Vertical"
             HorizontalAlignment="Center" 
             VerticalAlignment="Center">
             <Button 
-                Content="Добавить метод оплать"
-                Padding="10" 
-                Margin="0 4" />
-            <Button 
                 Content="Показать в другой валюте" 
+                Command="{Binding ChangeCurrencyCommand}"
                     Padding="10" Margin="0 4"/>
             <Button 
-                Content="История транзакций" 
+                Content="Статистика рассходов" 
                     Padding="10" Margin="0 4"/>
         </StackPanel>
     </Grid>
