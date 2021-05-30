@@ -33,18 +33,17 @@ namespace STEP_PAY
     //    }
     //}
 
-    //public partial class App : Application
-    //{
-    //    protected override void OnStartup(StartupEventArgs e)
-    //    {
-    //        base.OnStartup(e);
-    //        var mainView = new MainWindow()
-    //        {
-    //            DataContext =  /*new SupportViewModel() */new CardViewModel()
-    //        };
+    public partial class App : Application
+    {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
 
-    //        MainWindow = mainView;
-    //        MainWindow.Show();
-    //    }
-    //}
+            IncomeWindow incomeWindow = new IncomeWindow() { DataContext = new ApplicationViewModel() }; ;
+
+            WindowCosts WindowCosts = new WindowCosts() { DataContext = new ApplicationViewModel2() };
+            incomeWindow.Show();
+        }
+    }
+
 }

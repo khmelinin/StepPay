@@ -1,15 +1,80 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace STEP_PAY.Models
 {
-    public class User
+    class User
     {
-        public string UserName { get; set; } = "Test";
-        public byte[] Image { get; set; }
-
-        public User()
+        public User(List<Card> cards)
         {
-            Image = File.ReadAllBytes("./picture3.png");
+            Cards = cards;
         }
+
+        public User(int id, int phoneNumber, string name, string email, DateTime birthday)
+        {
+            Id = id;
+            PhoneNumber = phoneNumber;
+            Name = name;
+            Email = email;
+            Birthday = birthday;
+        }
+
+        /////////
+        // INT //
+        /////////
+        public int Id { get; set; }
+
+        // Номер Телефона
+        public int PhoneNumber { get; set; }
+
+        ////////////
+        // String //
+        ////////////
+
+        // Имя
+        public string Name { get; set; }
+
+        // Почта
+        public string Email { get; set; }
+
+
+        //////////////
+        // DateTime //
+        //////////////
+
+        // Дата Рождения
+        public DateTime Birthday { get; set; }
+
+
+
+        ////////////
+        //  List  //
+        ////////////
+
+        // Карточки пользователя
+        public List<Card> Cards { get; set; }
+
+
+
+        ///////////////
+        // Functions //
+        ///////////////
+        
+        // Добавить карту
+        public void AddCard(Card card)
+        {
+            Cards.Add(card);
+        }
+        // Удалить Карту
+        public void RemoveCard(Card card)
+        {
+            Cards.Remove(card);
+        }
+       
+        
+
     }
 }
