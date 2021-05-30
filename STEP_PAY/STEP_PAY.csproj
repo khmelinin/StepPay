@@ -80,55 +80,55 @@
     <Compile Include="Dialog\DialogFactory.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Globals.cs" />
-    <Compile Include="ViewModel\IRegister.cs" />
-    <Compile Include="ViewModel\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\CardViewModel.cs" />
+    <Compile Include="ViewModels\IRegister.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\SupportViewModel.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="ViewModel\CardViewModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\SupportViewModel.cs" />
-    <Compile Include="View\GlobalPage.xaml.cs">
+    <Compile Include="Views\GlobalPage.xaml.cs">
       <DependentUpon>GlobalPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MainView.xaml.cs">
+    <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\CardPage.xaml.cs">
+    <Compile Include="Views\CardPage.xaml.cs">
       <DependentUpon>CardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View\PasswordUser.xaml.cs">
+    <Compile Include="Views\PasswordUser.xaml.cs">
       <DependentUpon>PasswordUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Registration.xaml.cs">
+    <Compile Include="Views\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Support.xaml.cs">
+    <Compile Include="Views\Support.xaml.cs">
       <DependentUpon>Support.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\GlobalPage.xaml">
+    <Page Include="Views\GlobalPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MainView.xaml">
+    <Page Include="Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\CardPage.xaml">
+    <Page Include="Views\CardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\PasswordUser.xaml">
+    <Page Include="Views\PasswordUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Registration.xaml">
+    <Page Include="Views\Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Support.xaml">
+    <Page Include="Views\Support.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,5 +1,5 @@
-﻿using STEP_PAY.View;
-using STEP_PAY.ViewModel;
+﻿using STEP_PAY.Views;
+using STEP_PAY.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

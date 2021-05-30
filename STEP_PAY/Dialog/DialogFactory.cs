@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using STEP_PAY.View;
-using STEP_PAY.ViewModel;
+﻿using STEP_PAY.Views;
+using STEP_PAY.ViewModels;
 
 namespace STEP_PAY.Dialog
 {
