@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac5a62fc1caa429abc3a8f6652b74d74" Name="Diagram1">
+        <EntityTypeShape EntityType="STEP_PAYModel.Accounts" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STEP_PAYModel.Cards" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STEP_PAYModel.Expenses" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="STEP_PAYModel.Users" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="STEP_PAYModel.FK__Accounts__UserId__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="STEP_PAYModel.FK__Cards__UserId__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="STEP_PAYModel.FK__Expenses__CardId__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

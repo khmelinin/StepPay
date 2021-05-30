@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\misha\source\git\STEP_PAY\obj\Debug\
+C:\Users\misha\source\git\STEP_PAY\obj\Debug\
 STEP_PAY
 none
 false
 DEBUG;TRACE
-c:\users\misha\source\git\STEP_PAY\App.xaml
-4-1860421761
-
-14833060315
-22-1924266993
-..\..\..\Desktop\MainWindow.xaml;Views\AddWindow.xaml;Views\AddWindow2.xaml;Сonsumption.xaml;
+C:\Users\misha\source\git\STEP_PAY\App.xaml
+2-822294341
+3-2070821856
+2194428040
+1391845379171
+Views\IncomeWindow.xaml;Views\WindowCosts.xaml;
 
 False
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using STEP_PAY.ViewModels;
+using STEP_PAY.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,14 @@ namespace STEP_PAY
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            IncomeWindow incomeWindow = new IncomeWindow() { DataContext = new ApplicationViewModel() }; ;
+         
+            WindowCosts WindowCosts = new WindowCosts() { DataContext = new ApplicationViewModel2() };
+            incomeWindow.Show();
+        }
     }
 }
