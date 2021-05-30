@@ -61,3 +61,9 @@ C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.pdb
 C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\STEP_PAY.csprojAssemblyReference.cache
 C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.dll
 C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\bin\Debug\Newtonsoft.Json.xml
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\GlobalPage.g.cs
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\PasswordUser.g.cs
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\Registration.g.cs
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\GlobalPage.baml
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\PasswordUser.baml
+C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\obj\Debug\View\Registration.baml

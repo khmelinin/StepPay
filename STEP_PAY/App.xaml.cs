@@ -18,12 +18,11 @@ namespace STEP_PAY
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            var mainView = new MainView()
+            MainWindow = new MainView()
             {
-                DataContext =  /*new SupportViewModel() */new CardViewModel()
+                DataContext = new MainViewModel(new RegistrationViewModel())
             };
 
-            MainWindow = mainView;
             MainWindow.Show();
         }
     }

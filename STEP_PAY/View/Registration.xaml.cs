@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace STEP_PAY.View
 {
     /// <summary>
-    /// Interaction logic for CardPage.xaml
+    /// Interaction logic for Registration.xaml
     /// </summary>
-    public partial class CardPage : UserControl
+    public partial class Registration : UserControl
     {
-        public CardPage()
+        public Registration()
         {
             InitializeComponent();
         }

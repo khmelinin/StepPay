@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace STEP_PAY.View
 {
     /// <summary>
-    /// Interaction logic for CardPage.xaml
+    /// Interaction logic for GlobalPage.xaml
     /// </summary>
-    public partial class CardPage : UserControl
+    public partial class GlobalPage : Window
     {
-        public CardPage()
+        public GlobalPage()
         {
             InitializeComponent();
         }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\OFouda\Desktop\WebApp\khmelinin\StepPay\STEP_PAY\App.xaml
-32095691015
+6-2074047392
 
-12-48991212
+201107398268
 15992105650
-View\MainView.xaml;View\CardPage.xaml;View\Support.xaml;
+View\GlobalPage.xaml;View\MainView.xaml;View\CardPage.xaml;View\PasswordUser.xaml;View\Registration.xaml;View\Support.xaml;
 
-True
+False
 
